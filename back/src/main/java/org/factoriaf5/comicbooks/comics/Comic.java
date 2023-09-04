@@ -24,11 +24,6 @@ public class Comic {
     private String synopsis;
     private int stock;
 
-
-
-
-
-
     // @JsonIgnore
     // @ManyToMany(mappedBy = "comics")
     // List<Genre> genres;

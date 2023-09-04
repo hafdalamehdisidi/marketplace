@@ -13,6 +13,6 @@ public class ComicService {
         return comics;
     }
     public Optional<Comic> getComicByIsbn(String isbn){
-        return comicRepository.findByComicIsbn(isbn);
+        return comicRepository.findByIsbn(isbn);
     }
 }
