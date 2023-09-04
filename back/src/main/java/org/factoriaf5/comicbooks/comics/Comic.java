@@ -18,7 +18,7 @@ public class Comic {
     private String isbn;
     private String title;
     private String author;
-    private boolean hardcover;
+    private Boolean ishardcover;
     private String photo;
     private float price;
     private String synopsis;
