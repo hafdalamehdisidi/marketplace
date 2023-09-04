@@ -1,6 +1,5 @@
 package org.factoriaf5.comicbooks.genres;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.*;
@@ -11,7 +10,8 @@ import org.factoriaf5.comicbooks.comics.Comic;
 @Table(name = "genres")
 public class Genre {
     @Id 
-    @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    @Column(name = "id")
     private  Long id;
     @Column(name = "name")
     private String name;
@@ -28,8 +28,8 @@ public class Genre {
         this.name = name;
     }
 
-    @ManyToMany(cascade = {CascadeType.ALL})
-    @JoinTable(name="comics", joinColumns={@JoinColumn(name="isbn")}, inverseJoinColumns={@JoinColumn(name="id")})
+    @ManyToMany(fetch= FetchType.EAGER, cascade = {CascadeType.ALL})
+   /*  @JoinTable(name="comics", joinColumns={@JoinColumn(name="genre_id")}, inverseJoinColumns={@JoinColumn(name="comic_isbn")}) */
     Set<Comic> comics;
 }
 

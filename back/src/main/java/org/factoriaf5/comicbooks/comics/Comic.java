@@ -2,6 +2,7 @@ package org.factoriaf5.comicbooks.comics;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
@@ -19,7 +20,9 @@ import org.factoriaf5.comicbooks.genres.Genre;
 @Setter
 public class Comic {
     @Id
+    @Column(name = "isbn", nullable = false)
     private String isbn;
+    
     private String title;
     private String author;
     private Boolean ishardcover;
@@ -31,5 +34,4 @@ public class Comic {
     @JsonIgnore
     @ManyToMany(mappedBy = "comics")
     List<Genre> genres;
-
 }
