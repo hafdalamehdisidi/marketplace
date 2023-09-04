@@ -19,19 +19,19 @@ public class GenresController {
     private GenresService service;
 
     @GetMapping
-    public ResponseEntity<List<GenreModel>>  findAll(){
-        List<GenreModel> serviceGetAll = service.getAll();
+    public ResponseEntity<List<Genre>>  findAll(){
+        List<Genre> serviceGetAll = service.getAll();
         return ResponseEntity.status(HttpStatus.OK).body(serviceGetAll);
     }
     @PostMapping
-    public ResponseEntity<GenreModel> create(@RequestBody GenreModel genre){
-        GenreModel serviceSaved = service.create(genre);
+    public ResponseEntity<Genre> create(@RequestBody Genre genre){
+        Genre serviceSaved = service.create(genre);
         return ResponseEntity.status(HttpStatus.OK).body(serviceSaved);
     }
 
     @GetMapping(path = {"/{id}"})
-    public ResponseEntity<GenreModel> findOne(@PathVariable("id") Long id){
-        GenreModel findbyid = service.findById(id);
+    public ResponseEntity<Genre> findOne(@PathVariable("id") Long id){
+        Genre findbyid = service.findById(id);
         return ResponseEntity.status(HttpStatus.OK).body(findbyid);
     }
 }
