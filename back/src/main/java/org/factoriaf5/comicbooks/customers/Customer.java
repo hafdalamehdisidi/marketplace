@@ -1,7 +1,5 @@
 package org.factoriaf5.comicbooks.customers;
 
-import java.sql.Date;
-
 import jakarta.persistence.*;
 
 @Entity
@@ -9,48 +7,47 @@ import jakarta.persistence.*;
 public class Customer {
 
     @Id
-    /* @GeneratedValue(strategy = GenerationType.IDENTITY) */
     @Column(name = "email")
     private String email;
 
     @Column(name = "dni")
     private String dni;
 
-    @Column(name = "nombre")
-    private Date nombre;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "apellido1")
-    private String apellido1;
+    @Column(name = "surname")
+    private String surname;
 
-    @Column(name = "apellido2")
-    private String apellido2;
+    @Column(name = "surname2")
+    private String surname2;
 
-    @Column(name = "calle")
-    private String calle;
+    @Column(name = "street")
+    private String street;
 
-    @Column(name = "numero")
-    private String numero;
+    @Column(name = "number")
+    private Number number;
 
-    @Column(name = "portal")
-    private String portal;
+    @Column(name = "gate")
+    private String gate;
 
-    @Column(name = "escalera")
-    private String escalera;
+    @Column(name = "stair")
+    private String stairs;
 
-    @Column(name = "piso")
-    private String piso;
+    @Column(name = "floor")
+    private String floor;
 
-    @Column(name = "letra")
-    private String letra;
+    @Column(name = "letter")
+    private String letter;
 
-    @Column(name = "codigo_postal")
-    private String codigopostal;
+    @Column(name = "postalcode")
+    private Number postalcode;
 
-    @Column(name = "municipio")
-    private String municipio;
+    @Column(name = "town")
+    private String town;
 
-    @Column(name = "provincia")
-    private String provincia;
+    @Column(name = "province")
+    private String province;
 
     @Column(name = "password")
     private String password;
@@ -71,100 +68,100 @@ public class Customer {
         this.dni = dni;
     }
 
-    public Date getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(Date nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getApellido1() {
-        return apellido1;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setApellido1(String apellido1) {
-        this.apellido1 = apellido1;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
-    public String getApellido2() {
-        return apellido2;
+    public String getSurname2() {
+        return surname2;
     }
 
-    public void setApellido2(String apellido2) {
-        this.apellido2 = apellido2;
+    public void setSurname2(String surname2) {
+        this.surname2 = surname2;
     }
 
-    public String getCalle() {
-        return calle;
+    public String getStreet() {
+        return street;
     }
 
-    public void setCalle(String calle) {
-        this.calle = calle;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
-    public String getNumero() {
-        return numero;
+    public Number getNumber() {
+        return number;
     }
 
-    public void setNumero(String numero) {
-        this.numero = numero;
+    public void setNumber(Number number) {
+        this.number = number;
     }
 
-    public String getPortal() {
-        return portal;
+    public String getGate() {
+        return gate;
     }
 
-    public void setPortal(String portal) {
-        this.portal = portal;
+    public void setGate(String gate) {
+        this.gate = gate;
     }
 
-    public String getEscalera() {
-        return escalera;
+    public String getStairs() {
+        return stairs;
     }
 
-    public void setEscalera(String escalera) {
-        this.escalera = escalera;
+    public void setStairs(String stairs) {
+        this.stairs = stairs;
     }
 
-    public String getPiso() {
-        return piso;
+    public String getFloor() {
+        return floor;
     }
 
-    public void setPiso(String piso) {
-        this.piso = piso;
+    public void setFloor(String floor) {
+        this.floor = floor;
     }
 
-    public String getLetra() {
-        return letra;
+    public String getLetter() {
+        return letter;
     }
 
-    public void setLetra(String letra) {
-        this.letra = letra;
+    public void setLetter(String letter) {
+        this.letter = letter;
     }
 
-    public String getCodigopostal() {
-        return codigopostal;
+    public Number getPostalcode() {
+        return postalcode;
     }
 
-    public void setCodigopostal(String codigopostal) {
-        this.codigopostal = codigopostal;
+    public void setPostalcode(Number postalcode) {
+        this.postalcode = postalcode;
     }
 
-    public String getMunicipio() {
-        return municipio;
+    public String getTown() {
+        return town;
     }
 
-    public void setMunicipio(String municipio) {
-        this.municipio = municipio;
+    public void setTown(String town) {
+        this.town = town;
     }
 
-    public String getProvincia() {
-        return provincia;
+    public String getProvince() {
+        return province;
     }
 
-    public void setProvincia(String provincia) {
-        this.provincia = provincia;
+    public void setProvince(String province) {
+        this.province = province;
     }
 
     public String getPassword() {

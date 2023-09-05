@@ -29,25 +29,24 @@ public class CustomerService {
 
         currentCustomer.setEmail(newCustomer.getEmail());
         currentCustomer.setDni(newCustomer.getDni());
-        currentCustomer.setNombre(newCustomer.getNombre());
-        currentCustomer.setApellido1(newCustomer.getApellido1());
-        currentCustomer.setApellido2(newCustomer.getApellido2());
-        currentCustomer.setCalle(newCustomer.getCalle());
-        currentCustomer.setNumero(newCustomer.getNumero());
-        currentCustomer.setPortal(newCustomer.getPortal());
-        currentCustomer.setEscalera(newCustomer.getEscalera());
-        currentCustomer.setPiso(newCustomer.getPiso());
-        currentCustomer.setLetra(newCustomer.getLetra());
-        currentCustomer.setCodigopostal(newCustomer.getCodigopostal());
-        currentCustomer.setMunicipio(newCustomer.getMunicipio());
-        currentCustomer.setProvincia(newCustomer.getProvincia());
+        currentCustomer.setName(newCustomer.getName());
+        currentCustomer.setSurname(newCustomer.getSurname());
+        currentCustomer.setSurname2(newCustomer.getSurname2());
+        currentCustomer.setStreet(newCustomer.getStreet());
+        currentCustomer.setNumber(newCustomer.getNumber());
+        currentCustomer.setGate(newCustomer.getGate());
+        currentCustomer.setStairs(newCustomer.getStairs());
+        currentCustomer.setFloor(newCustomer.getFloor());
+        currentCustomer.setLetter(newCustomer.getLetter());
+        currentCustomer.setPostalcode(newCustomer.getPostalcode());
+        currentCustomer.setTown(newCustomer.getTown());
+        currentCustomer.setProvince(newCustomer.getProvince());
         currentCustomer.setPassword(newCustomer.getPassword());
         return repository.save(currentCustomer);
     }
 
-    public Customer delete(String email, Customer customer) {
+    public Customer delete(String email) {
         Customer customer1 = repository.findByEmail(email).orElseThrow();
-        customer1.setEmail(customer.getEmail());
         repository.delete(customer1);
         return customer1;
     }
