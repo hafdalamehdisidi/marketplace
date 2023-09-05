@@ -3,6 +3,9 @@ package org.factoriaf5.comicbooks.comics;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class ComicService {
     ComicRepository comicRepository;
     public ComicService(ComicRepository repository){

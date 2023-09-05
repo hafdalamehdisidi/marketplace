@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ComicController {
     private ComicService comicService;
+    
     public ComicController(ComicService service){
         this.comicService = service;
     }
