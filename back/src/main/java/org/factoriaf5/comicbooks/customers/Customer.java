@@ -3,7 +3,7 @@ package org.factoriaf5.comicbooks.customers;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "customer")
+@Table(name = "customers")
 public class Customer {
 
     @Id

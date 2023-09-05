@@ -3,6 +3,7 @@ package org.factoriaf5.comicbooks.comics;
 import java.util.List;
 import java.util.Optional;
 
+import org.factoriaf5.comicbooks.genres.Genre;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,14 @@ public class ComicService {
     public Optional<Comic> getComicByIsbn(String isbn){
         return comicRepository.findByIsbn(isbn);
     }
-    public Comic create(Comic comic){
+    public Comic create(Comic comic){       
+        return comicRepository.save(comic);
+    }
+    
+    public Comic create(Comic comic, Genre[] genres){
+        for(Genre genre : genres){
+          comic.genres.add(genre);  
+        }
         return comicRepository.save(comic);
     }
     public Comic findByIsbn(String isbn){

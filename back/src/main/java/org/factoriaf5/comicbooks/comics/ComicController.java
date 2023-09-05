@@ -20,12 +20,12 @@ public class ComicController {
         this.comicService = service;
     }
 
-    @GetMapping(path = "/comics")
+    @GetMapping
     public List<Comic> index(){
         List<Comic> comics = comicService.getAll();
         return comics;
     }
-    @GetMapping(path = "/comics/{isbn}")
+    @GetMapping(path = "/{isbn}")
     public ResponseEntity<Comic> getComicByIsbn(@PathVariable String isbn){
         Optional<Comic> optionalComic = comicService.getComicByIsbn(isbn);
         if(optionalComic.isPresent()){
