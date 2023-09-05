@@ -1,13 +1,18 @@
 package org.factoriaf5.comicbooks.comics;
 
-// import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-// import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
+
+import org.factoriaf5.comicbooks.genres.Genre;
 
 @Entity
 @Table(name="comics")
@@ -15,7 +20,9 @@ import lombok.Setter;
 @Setter
 public class Comic {
     @Id
+    @Column(name = "isbn", nullable = false)
     private String isbn;
+    
     private String title;
     private String author;
     private Boolean ishardcover;
@@ -24,8 +31,7 @@ public class Comic {
     private String synopsis;
     private int stock;
 
-    // @JsonIgnore
-    // @ManyToMany(mappedBy = "comics")
-    // List<Genre> genres;
-
+    @JsonIgnore
+    @ManyToMany(mappedBy = "comics")
+    List<Genre> genres;
 }
