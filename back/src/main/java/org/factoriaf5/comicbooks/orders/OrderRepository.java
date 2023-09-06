@@ -1,8 +1,9 @@
-package org.factoriaf5.comicbooks.genres;
+package org.factoriaf5.comicbooks.orders;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface GenresRepository extends JpaRepository<Genre,Long>{
+public interface OrderRepository extends JpaRepository<Order, Long>{
     
 }
