@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeuserviewComponent } from './views/homeuserview/homeuserview.component';
 import { HomeadminviewComponent } from './views/homeadminview/homeadminview.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { HomeadminviewComponent } from './views/homeadminview/homeadminview.comp
     AppComponent,
     HomeuserviewComponent,
     HomeadminviewComponent,
+    RegisterComponent,
   
   ],
   imports: [
