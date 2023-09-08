@@ -39,8 +39,8 @@ public class Comic {
     @ManyToMany(mappedBy = "comics")
     List<Genre> genres;
 
-    @OneToMany(mappedBy = "comic", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Order> customers = new ArrayList<>();
+    // @OneToMany(mappedBy = "comic", cascade = CascadeType.ALL, orphanRemoval = true)
+    // private List<Order> customers = new ArrayList<>();
 
     public void addGenre(Genre genre){
         genres.add(genre);
